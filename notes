@@ -1,0 +1,40 @@
+Get LLM running locally with a tiny “hello world” CLI.
+
+Add corpus ingestion + BM25 retrieval.
+
+Add RAG prompt template and wire into LLM.
+
+Add CLI with a REPL and basic flags.
+
+Add guardrails and nicer error handling.
+
+Add evaluation script & simple test set.
+
+Polish README + setup.sh.
+
+Language Model
+Model Selection: Choose a suitable pre-trained language model that can be quantized or already is quantized. Bonus points for designing and implementing this and/or explaining why or why not it was implemented.
+Quantization: If possible, apply techniques to reduce the model size and improve inference speed, such as 8-bit or 16-bit quantization.
+Validation: Ensure the quantized model maintains acceptable performance compared to its original form. Bonus points for providing a small test set with evaluation criteria and results.
+
+Retrieval Mechanism
+Corpus Creation: Create or utilize an existing text corpus for retrieval purposes.
+Retrieval Algorithm: Implement a retrieval algorithm (e.g., BM25, dense retrieval using sentence embeddings, keyword vector search, or other approach that you see fit.) to fetch relevant documents or passages from the corpus based on a query.
+Integration: Combine the retrieval mechanism with the language model to enhance its generation capabilities. Bonus points for properly sourcing each generated chunk. If you use an empirical approach and provide those results, this will be heavily weighted in your assessment.
+
+Command Line Interface
+Input Handling: Design the CLI to accept queries from the user.
+Prompt Engineering: Designing and implementing intelligent methods to reduce uncertainty from the user such as asking questions for query reformulation and RAG will be heavily weighted in your assessment.
+Output Display: Display the generated responses in a user-friendly format.
+Error Handling: Implement error handling to manage invalid inputs or unexpected behaviors.
+Guardrails: Design and implement constraints on what topics can and cannot be discussed with the model.
+
+Robustness and Efficiency
+Performance Testing: Test the model to ensure it runs efficiently on a standard laptop with limited resources. Assume modern but lightweight laptop specifications at a maximum (e.g., Intel Core i7 (M1-M3 Apple Chips), 16GM RAM, 256GB SSD).
+Response Time: Aim for a response time that balances speed and accuracy, ideally under a few seconds per query.
+Documentation: Provide clear documentation on how to set up, run, and interact with the model. “Time-to-local-host" is going to be an important factor in this assessment. Ideally, a shell script that can be run on a Linux OS for a complete install will be considered the gold standard. It is OK to assume a certain version and distribution of Linux.
+
+Python: The foundation of our project.
+LangChain: A popular open-source framework that simplifies the development of LLM applications.
+Hugging Face Transformers: To access pre-trained language models and tokenizers.
+FAISS: A library for efficient similarity search, which we’ll use as our vector store.

@@ -1,0 +1,4 @@
+A language model is a neural network that predicts the next token given previous tokens.
+Modern large language models are usually based on the Transformer architecture.
+They are trained on large text corpora and can perform tasks like question answering, summarization, and translation.
+Quantization is often used to make these models more efficient on resource-constrained hardware.
