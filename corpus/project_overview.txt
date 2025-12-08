@@ -1,0 +1,10 @@
+This project implements a fully local Retrieval-Augmented Generation (RAG) chatbot.
+
+The goal is to run a quantized language model entirely on a laptop without any cloud dependencies. The system uses a retriever to search over a local text corpus and a generator to answer questions using the retrieved context.
+
+The main components are:
+1. A quantized local language model, such as Phi-3 Mini.
+2. A retrieval mechanism based on BM25 over text chunks.
+3. A command-line interface that lets the user ask questions and see answers plus sources.
+
+This project is designed for constrained hardware, such as a laptop with a CPU, limited RAM, and no GPU.

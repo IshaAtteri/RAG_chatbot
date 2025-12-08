@@ -1,0 +1,7 @@
+The RAG system follows a simple but modular architecture.
+
+At a high level, the system has three layers: data, retrieval, and generation. The data layer manages the local corpus and handles preprocessing, such as chunking documents into smaller segments. The retrieval layer exposes a function that takes a user query and returns the top-k relevant chunks plus metadata about their sources. The generation layer wraps the language model and builds prompts that combine the user question and the retrieved context.
+
+The command-line interface orchestrates these layers. For each user query, the CLI calls the retriever, builds a RAG prompt, sends it to the language model, and then displays the final answer with a list of sources used.
+
+This architecture is designed to be extendable, so new retrieval methods or models can be plugged in without rewriting the entire system.

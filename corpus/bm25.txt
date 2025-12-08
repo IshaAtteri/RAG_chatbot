@@ -1,0 +1,7 @@
+The retrieval mechanism in this project is based on BM25, a classic information retrieval algorithm.
+
+Each document in the corpus is split into smaller text chunks. The BM25 index is built over these chunks by tokenizing the text into lowercase terms. At query time, the system scores each chunk based on how relevant it is to the query and returns the top scoring chunks.
+
+Using chunks instead of whole documents provides more precise context for the language model. The retrieved chunks are then concatenated and passed to the generator as part of the prompt.
+
+Later, the retrieval mechanism can be extended to include dense retrieval using embeddings, or hybrid approaches that combine BM25 and vector search.

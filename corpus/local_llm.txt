@@ -1,0 +1,7 @@
+The language model in this project is a small, instruction-tuned model like Phi-3 Mini that has been quantized for efficient CPU inference.
+
+Quantization converts high-precision floating point weights (such as 16-bit) into lower bit-width formats like 4-bit or 8-bit. This significantly reduces memory usage and improves inference speed at the cost of a small drop in accuracy.
+
+The system compares a quantized GGUF version of the model to a higher precision baseline. Metrics such as load time, tokens per second, and answer quality are recorded to show the trade-off between speed and quality.
+
+Running the model locally means there are no network calls, no external APIs, and no data leaves the machine.

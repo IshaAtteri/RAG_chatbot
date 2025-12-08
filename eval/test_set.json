@@ -1,0 +1,27 @@
+[
+  {
+    "id": "q1_rag_definition",
+    "question": "What is retrieval augmented generation and how does this project implement it?",
+    "expected_keywords": ["retrieval", "bm25", "corpus", "context", "local"]
+  },
+  {
+    "id": "q2_quantization_reason",
+    "question": "Why do we quantize the language model in this project?",
+    "expected_keywords": ["memory", "inference", "speed", "4-bit", "trade-off"]
+  },
+  {
+    "id": "q3_architecture_overview",
+    "question": "What is the high-level architecture of this RAG system?",
+    "expected_keywords": ["retriever", "generator", "cli", "corpus", "bm25"]
+  },
+  {
+    "id": "q4_local_llm_constraints",
+    "question": "What hardware constraints does this project assume and how does the design address them?",
+    "expected_keywords": ["laptop", "cpu", "no cloud", "quantized", "resources"]
+  },
+  {
+    "id": "q5_retrieval_mechanism",
+    "question": "How does the retrieval mechanism work in this project?",
+    "expected_keywords": ["bm25", "chunks", "token", "score", "relevant"]
+  }
+]

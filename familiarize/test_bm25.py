@@ -1,10 +1,9 @@
 from pathlib import Path
 from rank_bm25 import BM25Okapi
 
-# Paths
 THIS_DIR = Path(__file__).resolve().parent
 ROOT_DIR = THIS_DIR.parent
-CORPUS_DIR = ROOT_DIR / "corpus"
+CORPUS_DIR = ROOT_DIR / "corpus" 
 
 def load_corpus():
     docs = []
@@ -16,7 +15,6 @@ def load_corpus():
     return docs, meta
 
 def build_bm25(docs):
-    # super simple tokenization: lowercase + split on whitespace
     tokenized_docs = [doc.lower().split() for doc in docs]
     bm25 = BM25Okapi(tokenized_docs)
     return bm25, tokenized_docs
@@ -24,7 +22,6 @@ def build_bm25(docs):
 def retrieve(bm25, tokenized_docs, meta, query, k=3):
     query_tokens = query.lower().split()
     scores = bm25.get_scores(query_tokens)
-    # sort by score descending
     ranked = sorted(enumerate(scores), key=lambda x: x[1], reverse=True)[:k]
 
     results = []
@@ -32,7 +29,7 @@ def retrieve(bm25, tokenized_docs, meta, query, k=3):
         results.append({
             "score": float(score),
             "meta": meta[idx],
-            "text": tokenized_docs[idx],  # tokens for now
+            "text": " ".join(tokenized_docs[idx]),
         })
     return results
 
@@ -44,11 +41,10 @@ def main():
 
     bm25, tokenized_docs = build_bm25(docs)
 
-    # Try a few queries
     queries = [
         "what is retrieval augmented generation",
-        "explain language models and transformers",
-        "gait events and CNN BiLSTM",
+        "why do we quantize the language model",
+        "what is the architecture of this rag system",
     ]
 
     for q in queries:
