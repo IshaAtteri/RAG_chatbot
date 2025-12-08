@@ -1,0 +1,52 @@
+[
+    {
+        "id": "q1",
+        "question": "What is a neural network?",
+        "expected_keywords": ["neuron", "layers", "weights", "patterns", "learning"]
+    },
+    {
+        "id": "q2",
+        "question": "What is overfitting in machine learning?",
+        "expected_keywords": ["training data", "poor generalization", "memorization", "high variance"]
+    },
+    {
+        "id": "q3",
+        "question": "Explain the difference between CPU and GPU.",
+        "expected_keywords": ["parallel", "tasks", "cores", "performance", "computation"]
+    },
+    {
+        "id": "q4",
+        "question": "What is the purpose of activation functions?",
+        "expected_keywords": ["nonlinearity", "decision boundaries", "transform", "output"]
+    },
+    {
+        "id": "q5",
+        "question": "Describe what gradient descent does.",
+        "expected_keywords": ["minimize loss", "optimization", "iterative", "update weights"]
+    },
+    {
+        "id": "q6",
+        "question": "What is regularization?",
+        "expected_keywords": ["prevent overfitting", "penalty", "complexity", "generalization"]
+    },
+    {
+        "id": "q7",
+        "question": "What is the difference between supervised and unsupervised learning?",
+        "expected_keywords": ["labels", "classification", "clustering", "structure"]
+    },
+    {
+        "id": "q8",
+        "question": "Explain what tokenization means in NLP.",
+        "expected_keywords": ["split", "words", "subwords", "preprocessing", "text"]
+    },
+    {
+        "id": "q9",
+        "question": "What is the purpose of an embedding?",
+        "expected_keywords": ["vector", "representation", "semantic", "meaning", "space"]
+    },
+    {
+        "id": "q10",
+        "question": "What is a transformer model?",
+        "expected_keywords": ["attention", "encoder", "decoder", "parallel", "sequence"]
+    }
+]
