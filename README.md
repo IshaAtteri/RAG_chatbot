@@ -91,7 +91,7 @@ Guardrails: ON
 Commands: /exit, /quit, /help
 
 
-🛠 CLI Options
+CLI Options
 Select FP16 vs Q4 model
 python rag_cli.py --model fp16
 python rag_cli.py --model q4
