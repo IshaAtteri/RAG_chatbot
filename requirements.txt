@@ -1,0 +1,4 @@
+llama-cpp-python>=0.3.0
+rank-bm25>=0.2.2
+pypdf>=3.17.0
+numpy>=1.26.0
