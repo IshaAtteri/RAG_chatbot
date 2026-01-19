@@ -1,7 +1,6 @@
 Local RAG Chatbot (Phi-3 + BM25, Fully Offline)
 
 This project implements a fully local Retrieval-Augmented Generation (RAG) chatbot that runs offline on a laptop using a quantized Phi-3 Mini model and a BM25 retriever.
-No internet, no API keys, no server — everything happens on your machine.
 
 Features
 
